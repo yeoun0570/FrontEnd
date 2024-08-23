@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제10</title>
+</head>
+<body>
+    <!-- 1. 입력양식을 그룹핑하여 지정된 서버로 전송을 위한 태그 form -->
+    <!-- get방식 : 파일이름?search=ssg1234 주소에 데이터를 입력해서 전달하는 방식 -->
+    <!-- post방식 : 주소가 변경되지 않는다. 즉, 데이터를 보여주지 않고 지정된 서버프로그램에 전송한다. -->
+    <form action="/login.do" method="post">
+        <input type="text" name="search">
+        <input type="submit" value="전송"> 
+    </form>
+</body>
+</html>
