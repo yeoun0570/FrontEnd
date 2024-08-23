@@ -1,0 +1,31 @@
+*{
+    color: blueviolet;
+}
+
+p {
+    color: blue;
+}
+
+h1 {
+    font-size: 100px;
+    text-align: center;
+}
+
+#p1 {
+    color: coral;
+}
+
+.container{
+    color: brown;
+    background-color: aquamarine;
+}
+
+.my-class1 {
+    color: darkgreen;
+}
+
+.my-class2 {
+    background-color: deeppink;
+}
+
+

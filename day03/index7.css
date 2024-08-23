@@ -1,0 +1,20 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /*column은 교차축으로 row는 주축으로 정렬*/
+    justify-content: center;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+}
+
+#second {
+    background-color: seagreen;
+}

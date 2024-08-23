@@ -1,0 +1,17 @@
+/* 다중 선택할 때는 항상 #을 표기하기 */
+#header h1, #header h2{
+    color: red;
+}
+
+/* > : 자손선택자 */
+#header > h1 {color: red;} 
+#section > h1 {color: blue;}
+
+/* 반응 선택자 */
+li:hover {color: coral;}
+li:active {color: chartreuse;}
+
+/* 상태 선택자 */
+input:enabled {background-color:aliceblue;}
+input:disabled {background-color: gray;}
+input:focus {background-color: orange;}
