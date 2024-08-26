@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+* {
+    /* box-sizing: 박스 크기 기준 설정
+    border-box: 테두리를 기준
+    box-sizing: border-box ==> 테두리를 기준으로 박스를 잡는다. 거의 필수 */
+    box-sizing: border-box; /* 모든 요소들을 화면안에 넣겠다. 즉, 해상도가 작아져도 모든 요소가 웹페이지 안에서 보임*/
+}
+
+body {
+    background-color: var(--background-black);
+    color: white;
+    font-family: "Roboto", sans-serif; /* 글꼴을 Roboto(구글 폰트에서 찾음)로 지정, 없으면 sans-serif로 지정*/
+}
+
+input {
+    border: none;
+    outline: none;
+    appearance: none;
+}
