@@ -1,0 +1,79 @@
+@import "./global.css";
+@import "./variable.css";
+
+.profile {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile img{
+    width: 5rem;
+    height: 5rem;
+    background-image: url("myprofile.jpg");
+    background-size: 130px;
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+
+.profile-name {
+    display: flex;
+    justify-content: center;
+}
+
+
+.play-movie-continue-text {
+    margin: 1rem;
+}
+
+.play-movie-continue {
+    margin: 1rem;
+    padding: 5rem;
+}
+
+.play-movie-continue li {
+    float: left;
+    width: 13rem;
+    height: 10rem;
+    
+    list-style: none;
+    background-color: var(--darkpurple);
+    border-radius: 25px;
+}
+
+.play-movie-continue img {
+    width: 12rem;
+    height: 8rem;
+    border-radius: 25px;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.mypage-wishlist{    
+    padding: 4rem;
+}
+
+.mypage-wishlist li {
+    list-style: none;
+    background-color: var(--darkpurple);
+    margin: 1rem;
+    border-radius: 25px;
+}
+
+.mypage-wishlist img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 25px;
+    margin: 1px;
+}
+
+.mypage-wishlist span {
+    background-color: var(--purple);
+    border-radius: 50%;
+    left:calc(65% + 5rem);
+    font-size: 2.5rem;
+    bottom: 3.5rem;
+}
