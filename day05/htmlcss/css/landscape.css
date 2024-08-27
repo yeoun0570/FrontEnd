@@ -1,0 +1,4 @@
+/* 가로가 더 길었을 때 : landscape */
+@media screen and (orientation: landscape) {
+    body {background-color: orange;}
+}

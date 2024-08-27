@@ -1,0 +1,4 @@
+/* 일반적으로 스마트폰 픽셀은 767에서 768정도 된다 */
+@media screen and (max-width:767px) {
+    body {background-color: blueviolet;}
+}

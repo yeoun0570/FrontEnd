@@ -1,0 +1,4 @@
+/* 세로가 더 길었을 때 : portrait */
+@media screen and (orientation: portrait) {
+    body {background-color: blue;}
+}
