@@ -1,0 +1,217 @@
+<자바스크립트 복습 및 학습>
+1. 자바스크립트는 웹페이지 조작하기 위해 만들어졌다.
+2. 웹페이지의 기본 목적 : 데이터 관리
+    a. 데이터 관리 : 어딘가에 저장하고 원할때 출력하며 정제된 데이터를 활용
+3. 데이터 관리를 위해선 변수와 상수(데이터를 담는 메모리)가 필요
+    a. 변수 : 값이 변할수 있는 메모리
+        i. var, let
+    b. 상수 : 값이 변할수 없는 메모리
+        i. const
+    c. 즉, 데이터를 재사용하고, 해당 데이터에 접근하기 위해 필요하다.
+4. 변수와 상수를 사용하기 위한 단계
+    a. 선언 : 변수의 이름을 알려주는 행위(var,let,const)
+    b. 할당 : 변수에 데이터를 담아주는 행위
+        i. 데이터를 지정된 메모리(변수의 이름)에 저장
+5. 변수와 상수의 특징
+    a. 중복으로 선언할 수 있는지 여부
+        i. 재선언 여부
+        ii. 재할당 여부
+    b. 변수/상수별 재선언, 재할당 여부
+        i. var : 재선언(O), 재할당(O)
+        ii. let : 재선언(X), 재할당(O)
+        iii. const : 재선언(X), 재할당(O)
+    c. 변수명 지정시 명사로 지정하길 권장
+
+6. 데이터 타입(자료형)
+    a. 문자열(String)
+        i. "abc", 'abc' 가능('abc' 를 권장)
+        ii. '+' : 연결연산자
+            1. 'hello' + '123' ==> hello123
+    b. 숫자(Number)
+        i. 산술연산자
+            1. +, -, *, /, %
+        ii. 숫자가 아닌 다른 데이터타입으로 산술연산자 사용 시
+            1. NaN(Not a Number)가 뜬다. ('a'*12 ==> NaN)
+            2. '+'은 예외이다. ('a'+12 ==> a12)
+    c. Boolean
+    d. undefined
+    e. null
+    f. symbol
+    g. Bigint
+    h. Object
+
+7. 배열(array)
+    a. 여러개의 데이터가 순서와 함께 저장하고 싶을 때 자료구조(저장창고)
+    b. 사용예시 
+        i. let makeArr = ["1","2",null,undefined,Object]
+    c. index(인덱스)
+        i. 배열 데이터의 저장 순서
+        ii. 요소에 순서를 부여하고 해당요소에 접근이 가능하도록 지원
+    d. 배열 명령어
+        i. array.length : 배열의 길이를 제공
+        ii. array.push() : 배열의 가장 뒤에 데이터 추가i
+        iii. array.pop() : 배열의 가장 뒤의 데이터 삭제
+        iv. array.includes() : 특정 배열에 주어진 데이터가 포함되어있는지 확인
+            1. 예시 : makeArr.includes('2') ==> true
+        v. array.indexOf() : 특정 배열에서 지정된 요소를 찾을 수 있는 첫번째 인덱스 반환
+            1. 예시 : makeArr.indexOf('1') ==> 0
+        vi. https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array 
+            1. 다른 배열 활용 명령어들 참고할 사이트(MDN)
+
+8. 객체(Object)
+    a. 객체는 키값을 통해 데이터가 무엇에 대한 데이터인지 명시해줄 수 있다.
+    b. 객체를 정의시 {} 사용
+        i. let userData = {
+                name : '신세계',
+                age : 20,
+                height : 180,
+                wight : 80,
+                company : 'SSG&INC'
+            }
+        ii. 키가 name, '신세계'가 값
+    c.  프로퍼티(Property)
+        i. 객체 안의 데이터들 하나하나를 말한다.
+        ii. 즉, key와 value를 묶은 것
+    d. 객체의 프로퍼티에 접근
+        i. key값에 접근해서 value를 가지고 온다.
+        ii. Dot notation(점 표기법)
+            1. userData.age ==> 20
+            2. userData.age = 22 ==> userData의 age 값이 20에서 22로 변경
+        iii. Bracket notation (괄호 표기법)
+            1. userData["age"] ==> 20
+            2. userData["age"] = 21 ==> userData의 age 값이 20에서 21로 변경
+            3. []안에 ""로 지정해야 key로 인식하고 ""를 안쓰면 변수로 인식한다.
+    e. 객체 메서드 (내장 메서드)
+        i. Object.keys() : 객체의 key만을 가져와 배열에 담아두는 메서드
+            1. Object.keys(userData) ==> [name, age, height, company]
+        ii. Object.values() : 객체의 value만 가져와 배열에 담아두는 메서드
+            1. Object.values(userData) ==> ["신세계", 20, 180, 80, "SSG&INC"]
+
+9. 함수 (function)
+    a. 어떤 기능이나 계산을 수행할 수 있는 도구
+    b. 함수의 순서(?) 
+        i. 입력데이터(매개변수, parameter)
+        ii. 입력데이터를 처리(logic processor)
+        iii. 결과 데이터(반환 데이터, return값)
+    c. 도구를 활용(함수의 호출)
+        i. function sayHello() {
+                console.log('안녕하세요')
+            }
+        ii. 호출 ==> :sayHello()
+    d. HTML 태그에는 부여할 수 있는 많은 속성(Property)이 존재한다.
+        i. onClick() ==> 이벤트(event)
+            1. 해당 태그에 사용자에 의해 클릭이벤트가 발생했을 때, 할당되어있는 수식, 코드를 실행하라
+            2. 이벤트 핸들러 : 이벤트가 발생했을 때 이벤트를 처리하는 함수
+
+10. querySelector (태그선택)
+    a. JS내에서 HTML 요소의 객체값을 참조할 때 사용하는 기능
+
+참고. Date
+    a. month, day, date는 0부터 시작하므로 +1을 해줘야한다.
+    b. getDate가 일이고 getDay는 요일이다.
+
+11. 함수의 리턴
+    a. 함수 내부에 존재하는 데이터 또는 연산의 결과를 외부로 전달하는 기능
+    b. reuturn 명령어를 사용
+    c. return 뒤에 오는 데이터를 함수를 호출했던 위치로 전달해준다.
+    d. const sum = function() {         //익명함수
+            let result = 10 + 10;
+            return result;
+        }
+
+        let returnData = sum()
+        console.log(returnData) ==> 20
+
+    e. const sum = function() => {         //화살표함수 표기법 가능
+            let result = 10 + 10;
+            return result;
+        }
+
+12. <ul></ul> <ol></ol> <li></li>
+
+13. DOM
+    a. HTML 문서를 파싱(구성된 요소를 분석하고 의미를 이해하여 활용)하여 트리구조 형태의 객체생성
+    b. DOM Tree (DOM 트리 구조) - 요소들을 노드(Node)
+    c. Document(문서(document) 노드)
+        i. DOM에 진입할 수 있는 진입점 역할
+    d. HTML (root Node)
+        i. Document를 제외하고 최상위의 위치 
+        ii. 단 한개만 존재한다.
+    e. 요소(Element) 노드
+        i. head, body, title, div...등등
+        ii. 속성을 가질 수 있는 유일한 노드
+    f. 속성(attribute) 노드
+        i. src = "...", id= "..."
+    g. 텍스트(Text) 노드
+        i. <p>안녕</p> "안녕"
+        ii. childNode, left node, leaf node
+
+참고. document를 활용하여 JS내부로 각각의 Node들을 참조할 수 있다.
+    a. document.getElementByTagName('p').item[0]
+        i. Element 노드의 이르을 체크해서 해당 Element를 참조
+    b. document.getElementById('demo')
+        i. Element 노드의 id를 체크해서 해당 Element를 참조
+    c. document.querySelector(.id(#"))
+        i. id를 기반으로 class('.')을 참조
+    d. document.querySelectorAll()
+        i. 배열형태로 모든 요소를 참조
+    e. document.createElement()
+        i. 새로운 Node 생성
+        ii. DOM에 직접적으로 추가하지는 않는다.
+    f. document.appendChild()
+        i. Element Node를 현재 DOM에 추가
+        ii. 위에서 생성한 요소를 DOM에 추가하려면 이것을 사용하면된다.
+    h. https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+
+14. 반복문 (while, for, for-in, for-of)
+    a. for
+        i. for(최초식; 조건식; 증감문){반복 수행할 코드}
+        ii. 최초식 : 내가 사용할 변수선언 (let i = 0)
+        iii. 조건식 : i < 10
+        iv. 증감문 : i=i+1, i++(--)
+    b. for-of (배열에서 주로 사용)
+        i. const arr = [1,2,3,4,5]
+           for(let e of arr) {
+            console.log(e)
+           }
+           ==> 1 2 3 4 5
+        ii. 배열의 요소개수만큼 반복
+    c. for-in (객체에서 주로 사용)
+        i. const = obj { name : "otter", gender : "male"}
+            for(let key in obj) {console.log(key)}
+            ==> name gender
+        ii. 객체에서 뽑을 key나 value
+    d. while
+        i. 자바와 동일
+
+15. 스코프(scope)
+    a. 선언된 변수가 어떤 범위까지 유효한지, 어디서나 접근이 가능한지
+    b. 지역 스코프를 생성하는 종류
+        i. 참조 가능한 유효범위의 경계를 조건문, 반복문을 포함한 코드블럭 {}으로 할지, 오직 함수의 코드블럭으로 할지
+        i. 함수레벨 scope
+            1. 함수레벨 스코프는 변수가 선언된 함수 내에서만 유효한 스코프를 말합니다. 이 스코프에서는 함수 내부에 선언된 변수는 함수가 종료되기 전까지 함수 내 어디서든 접근할 수 있지만, 함수 밖에서는 접근할 수 없습니다. 주로 JavaScript에서 var 키워드로 선언된 변수가 이 규칙을 따른다.
+        ii. 블록레벨 scope (ES6 : let, const)
+            1. 블록레벨 스코프는 {}로 감싸진 블록 내부에서만 변수가 유효한 스코프를 말합니다. 즉, 블록을 벗어나면 해당 변수는 더 이상 접근할 수 없습니다. JavaScript에서 let과 const 키워드로 선언된 변수는 블록레벨 스코프를 가진다.
+    c. 스코프 체인 (Scope Chain)
+        i. 자바스크립트에선 렉시컬 스코프 원칙(정적 스코프(Static Scope))를 동적스코프보다 우선으로 한다.
+        ii. 정적 스코프 : 함수를 호출한 곳이 아닌 선언한 곳을 기준으로 스코프를 결졍한다.
+
+16. 호이스팅
+    a. 함수, 변수의 선언이 마치 위로 끌어올려진 것처럼 동작하는 것
+    b. 선언되지 않았는데 아래에서 선언했다고 에러가 안뜸
+    c. var사용, let,const는 미사용
+        i. 그렇다고 let, const가 호이스팅이 안되고 있다는 것은 아니다.
+
+참고. 변수
+    a. 선언단계
+        i. 선언한 변수를 식별자가 담기는 객체에 할당하는 단계
+    b. 초기화 단계
+        i. 변수에 할당할 메모리 공간을 부여하는 단계
+    c. 할당 단계
+        i. 정의된 변수에 데이터가 할당되는 단게 (식별자 === 변수명)
+    d. TDZ(Temporal Dead Zone)
+        i. 선언단계와 초기화 단계 사이의 단계를 하나더 만들어 놓음
+        ii. let.const는 선언단계에서 TDZ를 걸어놨다.
+        iii. 그래서 let, const는 호이스팅 해도 TDZ에서 되가지고 에러가 뜨는것이다.
+    
+
