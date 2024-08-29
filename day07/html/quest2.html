@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. I study JavaScript right now 5개의 단어를 배열 keyword로 생성하세요
+        let keyword = ['I','study','JavaScript','right','now'];
+        alert(keyword); // I,study,JavaScript,right,now
+
+        // 2. keyword에서 처음 두개 단어를 삭제하세요
+        // 3. 삭제완료된 keyword 내용을 확인하세요
+        let removed = keyword.splice(0,2);
+        alert(keyword); // JavaScript,right,now
+        let update = keyword.splice(2,0,'I','play'); //2번 인덱스부터 'I','play'를 추가
+        alert(keyword); // JavaScript,right,I,play,now
+        alert(keyword.length); // 5
+    </script>
+</body>
+</html>

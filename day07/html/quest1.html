@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1. I am happy 세단어를 배열 status로 생성하세요
+    let status = ['I','am','happy'];
+    alert(status.length); // 3
+
+    // 2. status에서 am 단어를 삭제하세요
+    // delete status[1] 이러면 'am'은 삭제되지만 인덱스 공간은 남는다.
+    // 그러므로 위 작업을 하고 status.length를 보면 여전히 3이 나온다.
+    status.splice(1,1); // splice는 어디 인덱스부터 몇개의 인덱스를 삭제할지 정함
+    alert(status[1]); // undefined
+    alert(status.length); // 3
+
+    // 3. am이 삭제 되었는지 확인하세요
+     alert(status);
+    </script>
+</body>
+</html>

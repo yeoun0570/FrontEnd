@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 이름은 Jon, 나이는 30, 회사는 SSGINC
+        // 이사람의 정보를 user 객체로 생성해주세요
+        let user = {
+            name : 'Jon',
+            age : 30,
+            isAdmin : false,
+            auth : ['user', 'teamReader'],
+            company : 'SSGINC',
+            married : null
+        }
+
+        let jsonUser = JSON.stringify(user);
+        alert(user); // [object Object]
+        alert(typeof jsonUser); // string
+
+        // 아래와 같이 만들어질 것이다.
+        // JSON은 반드시 ""를 사용한다.
+        // {
+        //     "name" : "Jon",
+        //         "age" : 30,
+        //             "isAdmin" : false,
+        //                 "auth" : ["user", "teamReader"],
+        //                     "company" : "SSGINC",
+        //                         "married" : null
+        // }
+
+    </script>
+</body>
+</html>

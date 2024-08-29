@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            sayHello() {alert("hello");},
+            [Symbol("id")] : 12345,
+            nothing : undefined, // 여기까지는 자바스크립트에서만 사용하는 애들
+            name : 'Jon',
+            age : 30,
+            isAdmin : false,
+            auth : ['user', 'teamReader'],
+            company : 'SSGINC',
+            married : null
+        }
+        // alert(JSON.stringify(user));
+
+        //JSON 데이터를 객체로
+        let numbers = "[0,1,2,3,4]";
+        alert(numbers); // [0,1,2,3,4] ==> 이 모양의 문자열을 출력한 것
+        numbers = JSON.parse(numbers); // 객체로 변환
+        alert(numbers[1]); // 1 => 문자열을 꺼내와서 객체(배열)이 되었음
+
+
+        let userData1 = '{"name":"John", "friends" : ["용빈", "주환", "태환"]}';
+        alert(JSON.parse(userData1));
+        alert(userData1.name);
+
+    </script>
+</body>
+</html>
