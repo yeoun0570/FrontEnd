@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var x; // 1. 전역 컨텍스트
+        // x = 1;  // 3. 런타임이 되었을 때 값을 할당
+        // console.log(x); // 2. 함수 컨텍스트
+
+        // 전역함수
+            const num1 = 10;
+            const num2 = 20;
+
+        // 함수 
+            function func1(number) {
+                const num1 = 10;
+                const num2 = 20;
+
+                console.log(number + num1 + num2);
+            }
+
+        // 함수 호출
+            func1(100); // 130
+
+        // 메서드 호출
+            console.log(num1 + num2); // 30
+
+    </script>
+</body>
+</html>

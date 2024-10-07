@@ -1,0 +1,22 @@
+<script>
+    // sleep 함수는 일정시간(delay) 지난 후에 콜백함수(fun)를 호출한다.
+    function sleep(fun, delay) {
+        const delayTime = Date.now() + delay; // Date.now() : 현재시간을 숫자(ms)로 반환
+
+        while (Date.now() < delayTime);
+
+        fun();
+
+    }
+
+    function func1(){ console.log('Im func1') }
+
+    function func2(){ console.log('Im func2') }
+
+    // 현재 시간으로부터 딜레이를 가진 후에 실행하라
+    sleep(func1,3000);
+
+    // 바로 실행하라
+    func2();
+
+</script>

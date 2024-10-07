@@ -1,0 +1,10 @@
+<script>
+    function func1(){ console.log('Im func1') }
+
+    function func2(){ console.log('Im func2') }
+
+    // 타이머 함수를 이용해서 일정시간이 지나면 콜백함수를 호출하는 코드
+    // 타이머 함수 : setTimeout() ==> 블로킹하지 않는 성질이 있다.
+    setTimeout(func1,3000);
+    func2();
+</script>
